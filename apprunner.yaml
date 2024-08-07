@@ -1,0 +1,18 @@
+version: 1.0
+
+runtime: python3.10.2  # Replace with your desired Python version
+
+image-configuration:
+  runtime-environment:
+    variables:
+      DJANGO_SETTINGS_MODULE: your_project.settings.production  # Replace with your production settings
+
+build:
+  commands:
+    - pip install -r requirements.txt
+
+source:
+  type: code
+  code-repository:
+    repository-url: https://github.com/your-username/your-repo.git
+    source-directory: path/to/your/django/project
